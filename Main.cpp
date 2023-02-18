@@ -4,7 +4,7 @@
 //std::string hash_converter(long long sums) {
 //}
 
-long long Random(long base_num = 0, long max_num = 10000) {
+long long Random(long base_num = 1, long max_num = 1) {
 	long long return_value = 0;
 
 	int size = 1;
@@ -24,22 +24,21 @@ long long Random(long base_num = 0, long max_num = 10000) {
 
 	//	while ((sums / devident) > max_num) {
 	//		devident *= 10;
-	//		std::cout << "\n" << sums << "\n";
+	//		//std::cout << "\n" << sums << "\n";
 	//	}
 
 	//	sums -= devident;
-	//	std::cout << "\n" << sums << "\n";
+	//	//std::cout << "\n" << sums << "\n";
 	//}
 
-	//if (sums > max_num) sums = sums - (max_num - sums);
+	if (sums > max_num) sums = sums - (sums - max_num);
 	//std::cout << "\n" << sums << "\n";
 
 	return sums;
 }
 
 int main() {
-
-	std::cout << Random(1, 10);
+	std::cout << Random(1, 213512);
 
 	return 0;
 }
